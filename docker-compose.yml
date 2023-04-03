@@ -1,0 +1,5 @@
+services:
+  test-dev-ops:
+    build:
+      dockerfile: Dockerfile
+    image: test-dev-ops:latest

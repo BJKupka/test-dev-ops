@@ -1,4 +1,4 @@
 FROM openjdk:11
 WORKDIR /opt/app
-COPY ./build/ /opt/app/
-ENTRYPOINT ["java","-jar","/opt/app/libs/test-dev-ops.jar"]
+COPY ./build/libs/ /opt/app/
+ENTRYPOINT ["java","-jar","/opt/app/test-dev-ops.jar"]

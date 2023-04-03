@@ -1,20 +1,20 @@
 # test-dev-ops
 Repository to house an example project for DevOps stack involving Docker, Jenkins, and AWS
 
-
-## Docker Commands
+## Docker
+Official Docker documentation be found [here](https://docs.docker.com/)
 
 ### List Docker Images
-- <b>docker images</b>
+- docker images
 
 ### Build a Docker Image with a Specific Name/Tag
-- docker <b>build --tag <IMAGE_NAME> .</b>
+- docker build --tag <IMAGE_NAME> .
 
 ### Force Delete a Docker Image: 
-- <b>docker image -rm -f {IMAGE_NAME}
+- docker image -rm -f {IMAGE_NAME}
 
 ### Run a Docker Image: 
-- docker <b>run {IMAGE_NAME}</b>
+- docker run {IMAGE_NAME}
 
 ### List All Docker Processes: 
-- <b>docker ps</b>
+- docker ps
