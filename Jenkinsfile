@@ -10,5 +10,12 @@ pipeline {
                 sh 'gradle build'
             }
         }
+        stage('create docker image') {
+            steps {
+                sh 'docker --version'
+                sh 'docker compose version'
+            }
+        }
     }
+
 }
