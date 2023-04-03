@@ -16,5 +16,14 @@ Official Docker documentation be found [here](https://docs.docker.com/)
 ### Run a Docker Image: 
 - docker run {IMAGE_NAME}
 
-### List All Docker Processes: 
+### List All Docker Containers: 
 - docker ps
+
+### Build, Create, Start, and Attach Docker Containers for a Service
+- docker compose up
+
+### Stop and Remove Docker Containers for a Service
+- docker compose down
+
+### List Containers for a Service
+- docker compose ps
