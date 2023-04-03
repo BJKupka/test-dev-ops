@@ -27,3 +27,7 @@ Official Docker documentation be found [here](https://docs.docker.com/)
 
 ### List Containers for a Service
 - docker compose ps
+
+## Jenkins
+The easiest way to run Jenkins on a Windows machine is via the Docker container installation option.
+Instructions on how to create the docker image and the installation wizard steps can be found [here](https://www.jenkins.io/doc/book/installing/docker/#downloading-and-running-jenkins-in-docker).
