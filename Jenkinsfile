@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'Built-In Node' }
+    agent { label 'agent1' }
     tools {
         gradle '8.0.2'
     }
