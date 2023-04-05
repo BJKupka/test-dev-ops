@@ -13,10 +13,9 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker --version'
-                sh 'docker compose --version'
+                sh 'docker version'
+                sh 'docker build --tag test-dev-ops:latest .'
             }
         }
     }
-
 }
