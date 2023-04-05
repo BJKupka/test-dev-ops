@@ -2,7 +2,7 @@ pipeline {
     agent { label 'agent1' }
     tools {
         gradle '8.0.2'
-        docker 'Docker'
+        dockerTool 'Docker'
     }
     stages {
         stage('Build') {
