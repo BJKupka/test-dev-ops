@@ -11,9 +11,8 @@ pipeline {
             }
         }
         stage('Build Docker Image') {
-            agent any
             steps {
-                sh 'docker build --tag test-dev-ops:latest .'
+                def image = docker.build 'test-dev-ops:latest'
             }
         }
     }
