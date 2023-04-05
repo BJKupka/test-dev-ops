@@ -2,6 +2,7 @@ pipeline {
     agent { label 'agent1' }
     tools {
         gradle '8.0.2'
+        docker 'Docker'
     }
     stages {
         stage('Build') {
@@ -12,7 +13,8 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                def image = docker.build 'test-dev-ops:latest'
+                sh 'docker --version'
+                sh 'docker compose --version'
             }
         }
     }
