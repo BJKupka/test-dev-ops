@@ -4,16 +4,16 @@ pipeline {
         gradle '8.0.2'
     }
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'gradle --version'
                 sh 'gradle build'
             }
         }
-        stage('create docker image') {
+        stage('Build Docker Image') {
+            agent any
             steps {
-                sh 'docker --version'
-                sh 'docker compose version'
+                sh 'docker build --tag test-dev-ops:latest .'
             }
         }
     }
