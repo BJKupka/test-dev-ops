@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                docker { image '8.0.2-jdk11' }
+                docker { image 'gradle:8.0.2-jdk11' }
             }
             steps {
                 sh 'gradle --version'
