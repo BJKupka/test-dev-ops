@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'agent1' }
-    agent none
+//     agent none
 //     tools {
 //         gradle '8.0.2'
 //         dockerTool 'Docker'
