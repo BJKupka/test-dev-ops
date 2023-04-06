@@ -1,10 +1,5 @@
 pipeline {
-//     agent { label 'agent1' }
     agent any
-//     tools {
-//         gradle '8.0.2'
-//         dockerTool 'Docker'
-//     }
     stages {
         stage('Build') {
             agent {
@@ -18,6 +13,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh 'docker version'
+                sh 'docker compose version'
                 sh 'docker build --tag test-dev-ops:latest .'
             }
         }

@@ -1,5 +1,16 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.5.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.devops'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 repositories {
@@ -7,14 +18,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.google.guava:guava:31.1-jre'
-    testImplementation 'junit:junit:4.13.2'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-jar {
-    manifest {
-        attributes(
-                'Main-Class': 'app.HelloWorld'
-        )
-    }
+tasks.named('test') {
+    useJUnitPlatform()
 }

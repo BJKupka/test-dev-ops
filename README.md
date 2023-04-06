@@ -1,5 +1,15 @@
 # test-dev-ops
-Repository to house an example project for DevOps stack involving Docker, Jenkins, and AWS
+Repository to house an example project for DevOps stack involving SpringBoot, Docker, Jenkins, and AWS
+
+## About This App
+Build with `./gradlew clean; ./gradlew build`
+Start locally with `./gradlew bootrun`
+
+Create docker image with `docker build --tag test-dev-ops .`
+Run docker container with `docker run -p 8081:8081 test-dev-ops`
+
+Hitting hello endpoint locally: http://localhost:8081/test-dev-ops/hello
+Hitting info actuator locally: http://localhost:8081/test-dev-ops/hello/acutator/info
 
 ## Docker
 Official Docker documentation be found [here](https://docs.docker.com/)
